@@ -66,6 +66,7 @@ class AppFixtures extends Fixture
           $comment->setContent($this->faker->realText());
           $comment->setAuthor($this->getReference('user_admin'));
           $comment->setPublished($this->faker->dateTimeThisYear);
+          $comment->setBlogPost($this->getReference("blog_post_$i"));
 
           $manager->persist($comment);
         }
